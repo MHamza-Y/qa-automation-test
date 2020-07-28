@@ -6,4 +6,4 @@ Feature: See Full Cast
 
         When user clicks See full cast 
 
-        Then full cast list of "49" members is shown
+        Then full cast list of "65" members is shown
