@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^6.3.5",
-    "webdriverio": "^6.3.5"
+    "webdriverio": "^6.3.5",
+    "xlsx": "^0.16.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
