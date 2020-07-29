@@ -1,7 +1,8 @@
 import GHPage from '../../../page-objects/Google/HomePage'
 
 /**
- * navigate to a link
+ * Navigate to a link 
+ * @param  {String} linkOrKeyword
  */
 export default (linkOrKeyword) => {
     if(linkOrKeyword === 'G') {

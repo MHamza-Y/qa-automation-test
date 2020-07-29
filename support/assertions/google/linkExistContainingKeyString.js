@@ -1,7 +1,10 @@
 import GRPage from '../../../page-objects/Google/ResultsPage'
 import assert from 'assert'
-import { listeners } from 'cluster';
-export default keyString => {
+/**
+ * Check if the key string is found in the results
+ * @param  {String} keyString to search for
+ */
+export default (keyString) => {
     let links = GRPage.resultLinks;
     let linkFound = false;
     links.forEach(link => {

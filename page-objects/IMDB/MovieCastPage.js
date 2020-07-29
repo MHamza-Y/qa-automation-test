@@ -1,4 +1,8 @@
 class MovieCastPage {
+
+    /**
+     * get names of all cast member
+     */
     get allNames() {
         browser.waitUntil(()=>{
             return $('.cast_list .primary_photo img').isExisting();
@@ -12,11 +16,18 @@ class MovieCastPage {
         
     }
 
+    /**
+     * get stage names of all cast members
+     */
     get allStageNames() {
         stageNames = $$('.character> :not([class])');
 
 
     }
+
+    /**
+     * get appearances of all cast members
+     */
     get allAppearances() {
         $$('.toggle-episodes')
     }
