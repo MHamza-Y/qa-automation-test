@@ -6,5 +6,6 @@ import assert from 'assert'
  */
 export default (totalCast) => {
     
-    assert.equal(totalCast,MovieCastPage.allNames.length)
+    
+    assert.equal(totalCast,MovieCastPage.characterObject.length)
 }
