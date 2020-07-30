@@ -1,4 +1,5 @@
 import filepaths from '../../../data/FILEPATHS'
+import fs from 'fs'
 /**
  * @param  {string} filepathKey string key to find the filepath
  */
