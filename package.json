@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^6.3.5",
+    "superagent": "^5.3.1",
+    "superagent-response-time": "^1.0.3",
     "webdriverio": "^6.3.5",
     "xlsx": "^0.16.4"
   },

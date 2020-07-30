@@ -8,7 +8,6 @@ import saveToExcel from '../../actions/misc/saveToExcel'
 export default (totalCast) => {
     
     let characterObj = MovieCastPage.characterObject;
-    console.log(characterObj);
     assert.equal(totalCast,characterObj.length)
     saveToExcel(characterObj,'qaautomation',3);
 }

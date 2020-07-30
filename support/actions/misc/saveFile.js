@@ -10,6 +10,5 @@ export default (filepathKey,obj) => {
         if (err) {
             throw err;
         }
-        console.log("file saved:"+filepath);
     })
 }
