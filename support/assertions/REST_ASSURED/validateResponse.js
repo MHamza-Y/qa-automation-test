@@ -5,7 +5,14 @@ export default () => {
     let expObjs = readJsonFile('expected response file');
     
     for (let i=0;i<respObjs.length;i++) {
-        
+
+        if(expObjs[i]['Response Contains'] != 'N/A') {
+            (JSON.parse(expObjs[i]['Response Contains'])).forEach(property => {
+                assert(respObjs[i]['responseData']
+                .hasOwnProperty(property),
+                `Object ${respObjs[i]['responseData']} does not Contain key ${property} ${i}`)    
+            });
+        }
 
         assert.equal(
             expObjs[i]['Expected Response Code'],
@@ -21,6 +28,8 @@ export default () => {
             expObjs[i]['Expected Response Size in kilobyte (less than)']*1024>=respObjs[i].respSize,
             `recieved response size ${respObjs[i].respSize} byte greater than expected response size of ${expObjs[i]['Expected Response Size in kilobyte (less than)']} kilobyte`
         )
+
+
         
     }
 }
