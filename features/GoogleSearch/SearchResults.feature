@@ -4,6 +4,6 @@ Feature: Google Searching
 
     Given A web browser is at the Google home page
 
-    When The user enters "After Life" into the search bar
+    When The user enters a movie name into the search bar
 
-    Then link contatining "After Life (TV Series 2019– ) - IMDb" is shown on the results page
+    Then link contatining movie name is shown on the results page

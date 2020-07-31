@@ -1,12 +1,10 @@
 import goTo from '../google/navigateTo'
-
+import readJSON from '../misc/readFileJSON'
 /**
  * Navigate to the movie page
  * @param {String}
  */
 export default movieName => {
-    //temporary condition
-    if(movieName === 'After Life'){
-        goTo('https://www.imdb.com/title/tt8398600/')
-    }
+    const url = readJSON('output result link')['resultLink'];
+    goTo(url);
 }

@@ -13,8 +13,8 @@ When(/^The user enter google url in browser navigation$/,()=> {
 
 /**
  * Searches for a keyword on google
- * @param  {String} keyword to search for
+ * 
  */
-When(/^The user enters "(.*)" into the search bar$/,(keyword) => {
-    googleSearch(keyword);
+When(/^The user enters a movie name into the search bar$/,() => {
+    googleSearch();
 })

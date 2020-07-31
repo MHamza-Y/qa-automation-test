@@ -1,10 +1,10 @@
 import GHPage from '../../../page-objects/Google/HomePage'
-
+import readSheet from '../misc/readFromExcelFIle'
 /**
- * Enter a keyword and search for it
- * @param  {String} keyword to search
+ * Read a keyword from excel file and search for it
  */
-export default (keyword) => {
-    GHPage.enterKeywordInSearchField(keyword);
+export default () => {
+    const sheetObj = readSheet('Input');
+    GHPage.enterKeywordInSearchField(sheetObj[0]['Search String 1']);
     GHPage.clickSearchButton();
 }
