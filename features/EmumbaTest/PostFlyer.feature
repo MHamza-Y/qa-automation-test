@@ -4,6 +4,5 @@ Feature: Post Flyer
         And registers new account 
         And logs in
         When user navigate to post flyer
-        And fill the flyer 
-        And posts flyer
-        Then i can see my flyer on home page
+        And posts a new flyer 
+        Then user can see the flyer on home page
