@@ -14,7 +14,7 @@ class EmumbaTestHomePage {
      * get login button on home page
      */
     get loginButton() {
-        return $('.MuiButtonBase-root.MuiButton-root.MuiButton-text:nth-child(3)');
+        return $('=Login').$('..');
     }
 
     
@@ -22,11 +22,13 @@ class EmumbaTestHomePage {
      * get post flyer button on home page
      */
     get postFlyerButton() {
-        return $('.MuiButtonBase-root.MuiButton-root.jss7.MuiButton-text:nth-child(2)')
+        return $('[href="/submit"]')
     }
-
+    /**
+     * get logout button on home page
+     */
     get logoutButton() {
-        return $('.MuiButtonBase-root.MuiButton-root.jss1268.MuiButton-text')
+        return $('=Logout').$('..');
     }
     /**
      * click login button on home page
@@ -34,6 +36,22 @@ class EmumbaTestHomePage {
     clickLoginButton() {
         this.loginButton.waitForDisplayed(this.waitTime);
         this.loginButton.click();
+    }
+
+    
+    /**
+     * click post flyer button on home page
+     */
+    clickPostFlyerButton() {
+        this.postFlyerButton.waitForDisplayed(this.waitTime);
+        this.postFlyerButton.click();
+    }
+    /**
+     * click logout button on home page
+     */
+    clickLogoutButton() {
+        this.logoutButton.waitForDisplayed(this.waitTime);
+        this.logoutButton.click();
     }
 }
 
