@@ -1,6 +1,8 @@
 class EmumbaTestHomePage {
-    waitTime = 5000; 
 
+    constructor() {
+        this.waitTime = 5000;
+    }
     
     /**
      * get url of home page
@@ -14,7 +16,7 @@ class EmumbaTestHomePage {
      * get login button on home page
      */
     get loginButton() {
-        return $('=Login').$('..');
+        return $('span=Login').$('..');
     }
 
     
@@ -28,7 +30,17 @@ class EmumbaTestHomePage {
      * get logout button on home page
      */
     get logoutButton() {
-        return $('=Logout').$('..');
+        return $('span=Logout').$('..');
+    }
+    /**
+     * get heading of latest flyer posted
+     */
+    get latestFlyerHeading() {
+        return $('.MuiTypography-h5').getAttribute('innerText');
+    }
+
+    get latestFlyerBody() {
+        return $('.MuiTypography-body2.MuiTypography-paragraph').getAttribute('innerText');
     }
     /**
      * click login button on home page

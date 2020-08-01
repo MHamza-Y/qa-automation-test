@@ -1,6 +1,7 @@
 class MovieCastPage {
-    waitTime = 5000;
-
+    constructor() {
+        this.waitTime = 5000;
+    }
     /**
      * get names of all cast member
      */

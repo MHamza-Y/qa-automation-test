@@ -1,7 +1,8 @@
 class GoogleHomePage {
 
-    waitTime = 5000;
-
+    constructor() {
+        this.waitTime = 5000;
+    }
     /**
      * link for navigation to this page
      */

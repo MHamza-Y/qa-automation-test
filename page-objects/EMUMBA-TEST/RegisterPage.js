@@ -1,5 +1,9 @@
 class EmumbaRegisterPage {
-    waitTime = 5000;
+
+    constructor() {
+        this.waitTime = 5000;
+
+    }
     /**
      * get input field for first name
      */
@@ -103,6 +107,7 @@ class EmumbaRegisterPage {
         this.enterPassword(password);
         this.enterConfirmPassword(confirmPassword);
         this.clickRegister();
+        
     }
 }
 

@@ -1,6 +1,7 @@
 class MoviePage {
-    waitTime = 5000;
-
+    constructor() {
+        this.waitTime = 5000;
+    }
     /**
      * get see full cast element on MoviePage
      */

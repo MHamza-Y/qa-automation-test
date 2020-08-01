@@ -13,7 +13,7 @@ export default (dataObjArray,filepathKey,sheetNum) => {
     let excelObj = XLSX.readFile(filepaths[filepathKey])
     let sheetnames = excelObj.SheetNames;
     let sheetObj = excelObj.Sheets[sheetnames[sheetNum]];
-    XLSX.utils.sheet_add_json(sheetObj,dataObjArray, {origin: 'A2'})
+    XLSX.utils.sheet_add_json(sheetObj,dataObjArray, {origin: 'A1'})
 
     XLSX.writeFile(excelObj,filepaths[filepathKey])
 

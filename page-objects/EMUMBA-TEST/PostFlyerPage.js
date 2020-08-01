@@ -1,13 +1,19 @@
 class PostFlyerPage {
-    waitTime = 5000;
-
+    constructor() {
+        this.waitTime = 5000;
+    }
     /**
      * returns heading text of rules box
      */
     get rulesBoxHeading() {
         return $('.MuiBox-root>.MuiTypography-root.MuiTypography-h6').getText();
     }
-
+    /**
+     * get home button on post flyer page
+     */
+    get homeButton() {
+        return $('[href="/"]');
+    }
     /**
      * returns rules box content
      */
@@ -46,13 +52,13 @@ class PostFlyerPage {
      * get tag input field of flyer
      */
     get tagField() {
-        return $('.MuiInputBase-root.MuiOutlinedInput-root.MuiAutocomplete-inputRoot.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-adornedStart.MuiOutlinedInput-adornedStart.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd input')
+        return $$('.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded input')[2];
     }
     /**
      * get post flyer button
      */
     get postButton() {
-        return $('[=Post]').$('..');
+        return $('[type="submit"]');
     }
     /**
      * click button to post flyer
@@ -60,6 +66,10 @@ class PostFlyerPage {
     clickPostButton() {
         this.postButton.waitForDisplayed(this.waitTime);
         this.postButton.click();
+    }
+    clickHomeButton() {
+        this.homeButton.waitForDisplayed(this.waitTime);
+        this.homeButton.click();
     }
     /**
      * set value of title field
@@ -106,28 +116,30 @@ class PostFlyerPage {
      * @param  {Array} tags tags to include in flyer
      */
     enterTags(tags) {
-        this.titleField.waitForDisplayed(this.waitTime);
+        this.tagField.waitForDisplayed(this.waitTime);
         tags.forEach(tag => {
             this.tagField.click();
             this.tagField.setValue(tag);
-            browser.keys("\uE007"); 
+            browser.keys("\uE007");
         })
-        
+
     }
     /**
-     * fillout a flyer
+     * post a flyer
      * @param  {string} title title for the flyer
      * @param  {string} details details for the flyer
      * @param  {string} phoneNumber phone number for the flyer
      * @param  {string} address address for the flyer
      * @param  {Array} tags tags for the flyer
      */
-    filloutFlyer(title,details,phoneNumber,address,tags) {
+    postFlyer(title, details, phoneNumber, address, tags) {
         this.enterTitle(title);
         this.enterDetails(details);
         this.enterPhone(phoneNumber);
         this.enterAddress(address);
-        this.enterTags(tags); 
-        this.clickPostButton();     
+        this.enterTags(tags);
+        this.clickPostButton();
     }
 }
+
+module.exports = new PostFlyerPage();

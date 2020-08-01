@@ -1,6 +1,5 @@
 import EmumbaLogin from '../../../page-objects/EMUMBA-TEST/LoginPage';
-import readExcel from '../misc/readFromExcelFIle'
-
+import readExcel from '../misc/readFromExcelFIle';
 /**
  * read data from excel file 
  * and logs in a registered

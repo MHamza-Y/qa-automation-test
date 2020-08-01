@@ -1,5 +1,8 @@
 class EmumbaLoginPage {
-    waitTime = 5000;
+
+    constructor() {
+        this.waitTime = 5000;
+    }
     /**
      * get login page url
      */
@@ -7,7 +10,7 @@ class EmumbaLoginPage {
         return 'https://emumba-test.herokuapp.com/login';
     }
 
-    
+
     /**
      * get not a user yet link
      */
@@ -46,7 +49,8 @@ class EmumbaLoginPage {
     enterEmail(email) {
         this.emailField.waitForDisplayed(this.waitTime);
         this.emailField.click();
-        this.emailField.setValue(email);
+        this.emailField.addValue(email);
+        
     }
     /**
      * enter password into password input field
@@ -69,7 +73,7 @@ class EmumbaLoginPage {
      * @param  {string} email email required for login
      * @param  {string} password password required for login
      */
-    login(email,password) {
+    login(email, password) {
         this.enterEmail(email);
         this.enterPassword(password);
         this.clickLogin();
