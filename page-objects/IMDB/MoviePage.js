@@ -1,4 +1,6 @@
 class MoviePage {
+    waitTime = 5000;
+
     /**
      * get see full cast element on MoviePage
      */
@@ -10,7 +12,7 @@ class MoviePage {
      * click see full cast element
      */
     clickSeeFullCast() {
-        this.seeFullCastElement.waitForDisplayed(5000);
+        this.seeFullCastElement.waitForDisplayed(this.waitTime);
         this.seeFullCastElement.click();
     }
 }

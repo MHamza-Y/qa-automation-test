@@ -1,4 +1,5 @@
 class MovieCastPage {
+    waitTime = 5000;
 
     /**
      * get names of all cast member
@@ -6,7 +7,7 @@ class MovieCastPage {
     get allNames() {
         browser.waitUntil(()=>{
             return $('.cast_list .primary_photo img').isExisting();
-        },5000,'List failed to load');
+        },this.waitTime,'List failed to load');
         let imglinks = $$('.cast_list .primary_photo img');
         let names = [];
         imglinks.forEach(link => {
@@ -23,7 +24,7 @@ class MovieCastPage {
     get character() {
         browser.waitUntil(()=>{
             return $('.character').isExisting();
-        },5000,'character element failed to load');
+        },this.waitTime,'character element failed to load');
         return $$('.character');
      }
 

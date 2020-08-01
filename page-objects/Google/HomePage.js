@@ -1,5 +1,7 @@
 class GoogleHomePage {
 
+    waitTime = 5000;
+
     /**
      * link for navigation to this page
      */
@@ -26,7 +28,7 @@ class GoogleHomePage {
      * @param {String} keyword to enter for search on google 
      */
     enterKeywordInSearchField(keyword) {
-        this.searchField.waitForDisplayed(5000);
+        this.searchField.waitForDisplayed(this.waitTime);
         this.searchField.click();
         this.searchField.setValue(keyword);
     }
@@ -35,7 +37,7 @@ class GoogleHomePage {
      * click on the search button to initiate search for the keyword
      */
     clickSearchButton() {
-        this.searchButton.waitForDisplayed(5000);
+        this.searchButton.waitForDisplayed(this.waitTime);
         this.searchButton.click();
     }
     
