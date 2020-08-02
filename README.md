@@ -1,4 +1,5 @@
 # qa-automation-test
+
 This project implements following BDD tests,
 
 1- Check if internet is working
@@ -12,6 +13,12 @@ This project implements following BDD tests,
 5- Test post flyer for Emumba site
 
 6- Run all these tests in sequence
+
+
+
+To run this project your machince make sure node and npm is installed then simply clone this and run following command in working directory
+
+$ npm install
 
 
 To run tests in sequence use following command
