@@ -1,5 +1,7 @@
 const SPEC = process.env.SPEC;
 
+
+
 exports.config = {
     //
     // ====================
@@ -129,7 +131,9 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: [
-        'spec',
+        ['spec', {
+            outputDir: `./Results/${SPEC}`
+        }],
         ['json', {
             outputDir: './Results'
         }]

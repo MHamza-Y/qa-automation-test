@@ -4,8 +4,7 @@
   "description": "Search for movie keyword on google.com go to imdb find cast info, register and post flyer using that info on emumba test web page",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/.bin/wdio ./wdio.conf.js",
-    "seqTest": "node ./scripts/main.js"
+    "test": "node ./node_modules/.bin/wdio ./wdio.conf.js"
   },
   "author": "MHamzaY",
   "license": "ISC",
