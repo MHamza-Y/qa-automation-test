@@ -5,6 +5,7 @@ import readJSON from '../actions/misc/readFileJSON';
  * @param  {Array} runFeatures commands to run features sequentially
  * @param  {string} outputFileKey string key to location where file is saved
  */
+
 export default (runFeatures,outputFileKey) => {
 
     runFeatures.forEach(command => {

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^6.3.5",
+    "jsdoc": "^3.6.5",
     "superagent": "^5.3.1",
     "superagent-response-time": "^1.0.3",
     "webdriverio": "^6.3.5",

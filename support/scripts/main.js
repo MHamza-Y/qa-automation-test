@@ -1,6 +1,8 @@
 import clearFiles from '../actions/misc/clearRuntimeTestData';
 import runSeqTest from './runSeqTests'
-
+/**
+ * main script to run tests sequentially
+ */
 export default () => {
 
 
