@@ -16,7 +16,7 @@ This project implements following BDD tests,
 
 
 
-To run this project your machince make sure node and npm is installed then simply clone this and run following command in working directory
+To run this project on your machince, make sure node and npm is installed then simply clone this repo and run following command in working directory
 
 $ npm install
 
