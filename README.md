@@ -28,7 +28,7 @@ $ SPEC=./features/Main.feature npm test
 
 To run individual test use following command
 
-$ SPEC=<path to feature file> npm test
+$ SPEC=\<path to feature file> npm test
 
 
 !!!important!!!
